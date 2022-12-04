@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment"
+    android:background="#F4F4F4">
+    <TextView
+        android:id="@+id/whatlookText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What are you looking for?"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        />
+    <RadioGroup
+        android:layout_below="@+id/whatlookText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button_group">
+        <RadioButton
+            android:id="@+id/Radio_home_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textSize="20sp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:textAlignment="center"
+            android:button="@color/transparent"
+            android:background="@drawable/radio_selector"
+            android:textColor="@drawable/text_color"
+            android:elevation="4dp"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+        <RadioButton
+            android:id="@+id/Radio_PG_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PG"
+            android:textSize="20sp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:textAlignment="center"
+            android:button="@color/transparent"
+            android:background="@drawable/radio_selector"
+            android:textColor="@drawable/text_color"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+        <RadioButton
+            android:id="@+id/Radio_Roommate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roommate"
+            android:textSize="20sp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:textAlignment="center"
+            android:button="@color/transparent"
+            android:background="@drawable/radio_selector"
+            android:textColor="@drawable/text_color"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame_layout_small"
+        android:layout_below="@+id/button_group"
+        />
+
+
+
+</RelativeLayout>

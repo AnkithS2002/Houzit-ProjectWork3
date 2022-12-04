@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RoommateFragment"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/textCollegeRoommate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Type in your college name"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"/>
+    <EditText
+        android:id="@+id/editTextCollegeRoommate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textCollegeRoommate"
+        android:hint="College name"
+        android:layout_margin="20dp"
+        android:height="50dp"/>
+    <Button
+        android:id="@+id/searchBtnRoommate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_below="@+id/editTextCollegeRoommate"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/ownerTextRoommate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchBtnRoommate"
+        android:text="Are you looking for a roommate?"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
+    <Button
+        android:id="@+id/ownerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post an Ad"
+        android:layout_below="@+id/ownerTextRoommate"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
