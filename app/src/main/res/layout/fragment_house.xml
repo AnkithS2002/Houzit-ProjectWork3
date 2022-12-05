@@ -42,13 +42,38 @@
                         android:textColor="@color/black"
                         android:textSize="30sp"
                         android:textAlignment="center"/>
-                    <EditText
-                        android:id="@+id/editTextCollegeHouse"
-                        android:layout_width="match_parent"
+<!--                    <EditText-->
+<!--                        android:id="@+id/editTextCollegeHouse"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="College name"-->
+<!--                        android:layout_margin="20dp"-->
+<!--                        android:height="50dp"/>-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:hint="College name"
-                        android:layout_margin="20dp"
-                        android:height="50dp"/>
+                        >
+                        <AutoCompleteTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/autocompleteHouse"
+                            android:height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:hint="College name"
+                            />
+
+
+                        <ImageView
+                            android:id="@+id/smallTriangle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginLeft="320dp"
+                            android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+                    </RelativeLayout>
+
                     <Button
                         android:id="@+id/searchBtnHouse"
                         android:layout_width="match_parent"
