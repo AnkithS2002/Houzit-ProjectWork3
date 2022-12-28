@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     BottomNavigationView bottomNavigationView;
     HomeFragment homeFragment = new HomeFragment();
-    SettingsFragment settingsFragment =new SettingsFragment();
+    ShortlistFragment shortlistFragment =new ShortlistFragment();
     PlansFragment plansFragment = new PlansFragment();
     ProfileFragment profileFragment = new ProfileFragment();
 
@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.bottom_plans:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, plansFragment).commit();
                         return true;
-                    case R.id.bottom_settings:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, settingsFragment).commit();
+                    case R.id.bottom_shortlist:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, shortlistFragment).commit();
                         return true;
                     case R.id.bottom_profile:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, profileFragment).commit();

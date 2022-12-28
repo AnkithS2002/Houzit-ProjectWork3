@@ -31,6 +31,9 @@ public class HomeFragment extends Fragment {
         Button PGBtn = view.findViewById(R.id.Radio_PG_btn);
         Button RoommateBtn = view.findViewById(R.id.Radio_Roommate_btn);
 
+        getChildFragmentManager().beginTransaction().replace(R.id.frame_layout_small, houseFragment).commit();
+
+
         houseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -7,9 +7,9 @@
     <item android:id="@+id/bottom_plans"
         android:title="Plans"
         android:icon="@drawable/ic_baseline_business_center_24"/>
-    <item android:id="@+id/bottom_settings"
-        android:title="Settings"
-        android:icon="@drawable/ic_baseline_settings_24"/>
+    <item android:id="@+id/bottom_shortlist"
+        android:title="Shortlist"
+        android:icon="@drawable/ic_baseline_favorite_24"/>
     <item android:id="@+id/bottom_profile"
         android:title="Profile"
         android:icon="@drawable/ic_baseline_person_24"/>

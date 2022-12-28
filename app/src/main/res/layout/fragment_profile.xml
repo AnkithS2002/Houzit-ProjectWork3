@@ -1,19 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ProfileFragment"
-    android:background="#F3CEFD">
+    android:background="@drawable/bg1">
 
-    <TextView
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Profile fragment"
-        android:textColor="@color/black"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textSize="40sp"
-        />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/profileLL"
+            android:layout_below="@+id/profiletxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/profiletxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:textSize="40sp"
+                />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="15dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-</FrameLayout>
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/profile_pic"
+                        android:layout_margin="20dp"
+                        app:civ_border_color="@color/black"
+                        app:civ_border_width="3dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_margin="20dp"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ankith S"
+                            android:textSize="30sp"
+                            android:textColor="@color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+91 8867399881"
+                            android:textSize="20sp"
+                            android:textColor="#838383" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="College: BMSCE"
+                            android:textSize="20sp"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp">
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Update Profile Picture"
+                            android:textSize="25sp"
+                            android:textColor="@color/black"
+                            android:backgroundTint="#F1D991"
+                            android:layout_marginHorizontal="10dp"
+                            android:textAllCaps="false"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Edit Account details"
+                            android:textSize="25sp"
+                            android:textColor="@color/black"
+                            android:backgroundTint="#F1D991"
+                            android:layout_marginHorizontal="10dp"
+                            android:textAllCaps="false"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Change Password"
+                            android:textSize="25sp"
+                            android:textColor="@color/black"
+                            android:backgroundTint="#F1D991"
+                            android:layout_marginHorizontal="10dp"
+                            android:textAllCaps="false"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Theme"
+                            android:textSize="25dp"
+                            android:textColor="@color/black"
+                            android:textAlignment="center"
+                            android:layout_margin="5dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+                            <Button
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:text="Light"
+                                android:layout_marginRight="20dp"
+                                android:textSize="25sp"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#F1D991"
+                                android:textColor="@color/black"/>
+                            <Button
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:text="Dark"
+                                android:textSize="25sp"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#000000"
+                                android:textColor="@color/white"/>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Account Summary"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="10dp"
+                        android:background="#FFD6D6"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No.of Owners contacted: 3"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Subscription: Free plan"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Upgrade My Account"
+                        android:backgroundTint="#3F51B5"
+                        android:textSize="25sp"
+                        android:textAllCaps="false"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

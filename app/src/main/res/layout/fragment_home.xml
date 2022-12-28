@@ -35,6 +35,7 @@
             android:textColor="@drawable/text_color"
             android:elevation="4dp"
             android:padding="10dp"
+            android:checked="true"
             android:layout_margin="10dp"/>
         <RadioButton
             android:id="@+id/Radio_PG_btn"
