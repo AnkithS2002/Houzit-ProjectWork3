@@ -32,7 +32,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:background="@drawable/bg1"
+                    android:background="#F4F4F4"
                     android:gravity="center">
                     <TextView
                         android:id="@+id/textCollegeHouse"
@@ -79,6 +79,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Search"
+                        android:textSize="18sp"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_gravity="center"/>
@@ -102,7 +103,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:background="@drawable/bg2"
+                    android:background="#E4EDFF"
                     android:gravity="center">
 
                     <TextView
@@ -119,6 +120,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Post an Ad"
+                        android:textSize="18sp"
                         android:layout_gravity="center"
                         android:layout_marginEnd="20dp"
                         android:layout_marginStart="20dp"/>
@@ -126,6 +128,21 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Need Assistance?"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="We are just a call away!  (8867399881)"
+                android:textSize="20sp"/>
 
         </LinearLayout>
 

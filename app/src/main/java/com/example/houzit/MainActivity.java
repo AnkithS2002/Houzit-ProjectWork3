@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -75,25 +77,29 @@ public class MainActivity extends AppCompatActivity {
                 switch (id){
 
                     case R.id.nav_home:
+                        startActivity(new Intent(MainActivity.this, MainActivity.class));
                         Toast.makeText(MainActivity.this, "Home is clicked", Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.nav_message:
-                        Toast.makeText(MainActivity.this, "Message is clicked", Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.nav_trash:
-                        Toast.makeText(MainActivity.this, "Trash is clicked", Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.nav_login:
-                        Toast.makeText(MainActivity.this, "Login is clicked", Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.nav_profile:
-                        Toast.makeText(MainActivity.this, "Profile is clicked", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_settings:
                         Toast.makeText(MainActivity.this, "Settings is clicked", Toast.LENGTH_SHORT).show();
                         break;
-                    case R.id.nav_rate:
-                        Toast.makeText(MainActivity.this, "Rate us is clicked", Toast.LENGTH_SHORT).show();
+                    case R.id.nav_shortlist:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, shortlistFragment).commit();
+                        Toast.makeText(MainActivity.this, "Shortlist is clicked", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_plans:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, plansFragment).commit();
+                        Toast.makeText(MainActivity.this, "plans is clicked", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_profile:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, profileFragment).commit();
+                        Toast.makeText(MainActivity.this, "Profile is clicked", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_login:
+                        Toast.makeText(MainActivity.this, "logout is clicked", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_about:
+                        Toast.makeText(MainActivity.this, "about us is clicked", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_share:
                         Toast.makeText(MainActivity.this, "Share is clicked", Toast.LENGTH_SHORT).show();

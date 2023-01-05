@@ -30,7 +30,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:background="@drawable/bg1"
+                    android:background="#F4F4F4"
                     android:gravity="center">
                     <TextView
                         android:id="@+id/textCollegeHouse"
@@ -100,7 +100,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:background="@drawable/bg2"
+                    android:background="#E4EDFF"
                     android:gravity="center">
 
                     <TextView
@@ -124,7 +124,20 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Need Assistance?"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="We are just a call away!  (8867399881)"
+                android:textSize="20sp"/>
         </LinearLayout>
 
     </ScrollView>

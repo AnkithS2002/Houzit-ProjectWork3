@@ -4,9 +4,9 @@
     tools:showIn="navigation_view">
 
     <item android:id="@+id/nav_home" android:icon="@drawable/ic_baseline_home_24" android:title="Home"/>
-    <item android:id="@+id/nav_message" android:icon="@drawable/ic_baseline_message_24" android:title="Messages"/>
-    <item android:id="@+id/nav_trash" android:icon="@drawable/ic_baseline_delete_24" android:title="Trash"/>
     <item android:id="@+id/nav_settings" android:icon="@drawable/ic_baseline_settings_24" android:title="Settings"/>
+    <item android:id="@+id/nav_shortlist" android:icon="@drawable/ic_baseline_favorite_24" android:title="My Shortlist"/>
+    <item android:id="@+id/nav_plans" android:icon="@drawable/ic_baseline_business_center_24" android:title="Plans"/>
 
     <item android:title="Profile">
         <menu>
@@ -19,11 +19,8 @@
     <item android:title="Communicate">
         <menu>
             <item android:id="@+id/nav_share" android:icon="@drawable/ic_baseline_share_24" android:title="Share"/>
-            <item android:id="@+id/nav_rate" android:icon="@drawable/ic_baseline_rate_review_24" android:title="Rate us"/>
+            <item android:id="@+id/nav_about" android:icon="@drawable/ic_baseline_info_24" android:title="About us"/>
         </menu>
 
     </item>
-
-
-
 </menu>
