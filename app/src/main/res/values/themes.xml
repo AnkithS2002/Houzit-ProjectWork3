@@ -28,4 +28,13 @@
         <item name="color">@color/white</item>
     </style>
 
+    <style name="Theme.Houzit.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Houzit.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Houzit.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

@@ -1,53 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".PGFragment"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true"
     android:background="@color/white">
 
-    <TextView
-        android:id="@+id/textCollegePG"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Type in your college name"
-        android:textColor="@color/black"
-        android:textSize="30dp"
-        android:layout_marginTop="20dp"
-        android:textAlignment="center"/>
-    <EditText
-        android:id="@+id/editTextCollegePG"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textCollegePG"
-        android:hint="College name"
-        android:layout_margin="20dp"
-        android:height="50dp"/>
-    <Button
-        android:id="@+id/searchBtnPG"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Search"
-        android:layout_below="@+id/editTextCollegePG"
-        android:layout_centerHorizontal="true"/>
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tenantCardView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true"
+                android:layout_gravity="center"
+                app:cardCornerRadius="10dp">
 
-    <TextView
-        android:id="@+id/ownerTextPG"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/searchBtnPG"
-        android:text="Are you Owner of a PG?"
-        android:textSize="30dp"
-        android:layout_centerHorizontal="true"
-        android:textAlignment="center"
-        android:textColor="@color/black"/>
-    <Button
-        android:id="@+id/ownerBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Post an Ad"
-        android:layout_below="@+id/ownerTextPG"
-        android:layout_centerHorizontal="true"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg1"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/textCollegeHouse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Type in your college name"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textAlignment="center"/>
+                    <!--                    <EditText-->
+                    <!--                        android:id="@+id/editTextCollegeHouse"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:hint="College name"-->
+                    <!--                        android:layout_margin="20dp"-->
+                    <!--                        android:height="50dp"/>-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+                        <AutoCompleteTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/autocompleteHouse"
+                            android:height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:hint="College name"
+                            />
 
-</RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/smallTriangle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginLeft="320dp"
+                            android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/searchBtnHouse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Search"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_gravity="center"/>
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/OwnerCardView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true"
+                android:layout_gravity="center"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg2"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/ownerTextHouse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Are you Owner of a property?"
+                        android:textSize="30sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="20dp"/>
+                    <Button
+                        android:id="@+id/ownerBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Post an Ad"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

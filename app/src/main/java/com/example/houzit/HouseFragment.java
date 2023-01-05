@@ -43,14 +43,13 @@ public class HouseFragment extends Fragment {
             }
         });
 
-//        searchBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getActivity(), HouseRecyclerView.class);
-//                intent.putExtra(msg, autoCompleteTextView.getText().toString());
-//                startActivity(intent);
-//            }
-//        });
+        searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ListItems_Recyclerview.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
     }

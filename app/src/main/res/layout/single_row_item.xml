@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:src="@drawable/h1"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:id="@+id/userString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1BHK for rent in Basavanagudi"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:layout_marginStart="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rent: "
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/rentVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RentVal"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deposit: "
+            android:textColor="@color/black"
+            android:layout_marginStart="40dp"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/depositVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DepositVal"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
