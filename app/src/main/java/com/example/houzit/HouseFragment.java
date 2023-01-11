@@ -33,6 +33,8 @@ public class HouseFragment extends Fragment {
         AutoCompleteTextView autoCompleteTextView = view.findViewById(R.id.autocompleteHouse);
         ImageView imageView = view.findViewById(R.id.smallTriangle);
         Button searchBtn = view.findViewById(R.id.searchBtnHouse);
+        Button ownerBtn = view.findViewById(R.id.ownerBtn);
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, colleges);
         autoCompleteTextView.setAdapter(adapter);
 
@@ -47,6 +49,14 @@ public class HouseFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), ListItems_Recyclerview.class);
+                startActivity(intent);
+            }
+        });
+
+        ownerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), PostProperty.class);
                 startActivity(intent);
             }
         });

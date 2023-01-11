@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostProperty"
+    android:background="@color/purple_500"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Post an Ad"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/white"
+                android:textSize="34sp"/>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_margin="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Enter the required details:"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"
+                        android:textSize="20sp"/>
+                    <ImageView
+                        android:id="@+id/imageViewAdd"
+                        android:scaleType="fitXY"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/ic_baseline_image_24"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Uplead the image of the house"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"
+                        android:textSize="20sp"/>
+
+
+                    <EditText
+                        android:id="@+id/ownerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Owner name"/>
+                    <EditText
+                        android:id="@+id/ownerContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Contact number"/>
+                    <EditText
+                        android:id="@+id/ownerEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email id"/>
+                    <AutoCompleteTextView
+                        android:id="@+id/autocompCollege"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="College nearby"/>
+                    <AutoCompleteTextView
+                        android:id="@+id/autocompHouseType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="House type"/>
+                    <AutoCompleteTextView
+                        android:id="@+id/autocompAreaName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Area/Colony name"/>
+                    <EditText
+                        android:id="@+id/rentAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rent amount"/>
+                    <EditText
+                        android:id="@+id/depositAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Deposit amount"/>
+                    <EditText
+                        android:id="@+id/areasqft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="House area in Sq. ft."/>
+                    <EditText
+                        android:id="@+id/facing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="House facing"/>
+                    <EditText
+                        android:id="@+id/furnishing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Furnishing status"/>
+                    <EditText
+                        android:id="@+id/water"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Water connection"/>
+                    <EditText
+                        android:id="@+id/parking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Parking facility"/>
+                    <EditText
+                        android:id="@+id/dateAvl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Available for rent from"/>
+                    <EditText
+                        android:id="@+id/security"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Gated security"/>
+                    <EditText
+                        android:id="@+id/vegNonveg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Veg non-veg allowed or not"/>
+                    <EditText
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="More description of the house"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewProgress"
+                        android:text="0.0%"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:textSize="20sp"/>
+                    <ProgressBar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/progressBar"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+                    <Button
+                        android:id="@+id/postBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Post the ad"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
