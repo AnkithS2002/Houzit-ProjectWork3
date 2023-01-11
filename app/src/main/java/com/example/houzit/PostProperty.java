@@ -178,7 +178,7 @@ public class PostProperty extends AppCompatActivity {
                                     hashMap.put("Area", AREA);
                                     hashMap.put("ImageUrl", uri.toString());
 
-                                    databaseReference.child(OWNERNAME).setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    databaseReference.child(key).setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void unused) {
                                             Toast.makeText(PostProperty.this, "AD successfully posted",Toast.LENGTH_SHORT).show();

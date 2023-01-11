@@ -48,7 +48,8 @@ public class HouseFragment extends Fragment {
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), ListItems_Recyclerview.class);
+//                Intent intent = new Intent(getActivity(), ListItems_Recyclerview.class);
+                    Intent intent = new Intent(getActivity(), RecyclerViewPage.class);
                 startActivity(intent);
             }
         });

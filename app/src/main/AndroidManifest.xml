@@ -16,6 +16,13 @@
         android:theme="@style/Theme.Houzit"
         tools:targetApi="31">
         <activity
+            android:name=".RecyclerViewPage"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".PostProperty"
             android:exported="false">
             <meta-data
@@ -72,7 +79,8 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
