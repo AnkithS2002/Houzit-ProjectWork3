@@ -102,7 +102,8 @@ public class PostProperty extends AppCompatActivity {
         progressBar.setVisibility(View.INVISIBLE);
         textViewProgress.setVisibility(View.INVISIBLE);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("House");
+//        databaseReference = FirebaseDatabase.getInstance().getReference().child("House");
+        databaseReference = FirebaseDatabase.getInstance().getReference("House");
         storageReference= FirebaseStorage.getInstance().getReference().child("HouseDetails");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(PostProperty.this, android.R.layout.simple_list_item_1, colleges);
@@ -177,7 +178,7 @@ public class PostProperty extends AppCompatActivity {
                                     hashMap.put("Area", AREA);
                                     hashMap.put("ImageUrl", uri.toString());
 
-                                    databaseReference.setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    databaseReference.child(OWNERNAME).setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void unused) {
                                             Toast.makeText(PostProperty.this, "AD successfully posted",Toast.LENGTH_SHORT).show();
