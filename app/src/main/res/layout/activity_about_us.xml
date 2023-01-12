@@ -131,10 +131,10 @@
                         android:text="BMS College of Engineering, Bull Temple road, Basavanagudi, Bengaluru - 560019"
                         android:textSize="20sp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
                         android:textColor="@color/black"
-                        android:justificationMode="inter_word"/>
+                        android:textAlignment="center"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -148,7 +148,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Email: support@houzit.in"
+                        android:text="Email: ankith.cs20@bmsce.ac.in"
                         android:textSize="20sp"
                         android:layout_marginTop="10dp"
                         android:layout_marginStart="10dp"

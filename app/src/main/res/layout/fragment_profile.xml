@@ -8,12 +8,8 @@
     android:background="@color/purple_500">
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
         <LinearLayout
             android:id="@+id/profileLL"
-            android:layout_below="@+id/profiletxt"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -82,65 +78,67 @@
                         android:layout_margin="10dp">
 
                         <Button
+                            android:id="@+id/editAccBtn"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Edit Account details"
-                            android:textSize="25sp"
                             android:textColor="@color/black"
                             android:backgroundTint="#ECECEC"
+                            android:textSize="16sp"
                             android:layout_marginHorizontal="10dp"
                             android:textAllCaps="false"/>
                         <Button
+                            android:id="@+id/changePassBtn"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Change Password"
-                            android:textSize="25sp"
                             android:textColor="@color/black"
+                            android:textSize="16sp"
                             android:backgroundTint="#ECECEC"
                             android:layout_marginHorizontal="10dp"
                             android:textAllCaps="false"/>
 
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Theme"
-                            android:textSize="25dp"
-                            android:textColor="@color/black"
-                            android:textAlignment="center"
-                            android:layout_margin="5dp"/>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center">
-                            <Button
-                                android:layout_width="170dp"
-                                android:layout_height="match_parent"
-                                android:text="Light"
-                                android:layout_marginRight="20dp"
-                                android:textSize="25sp"
-                                android:textAllCaps="false"
-                                android:backgroundTint="#E4E4E4"
-                                android:textColor="@color/black"/>
-                            <Button
-                                android:layout_width="170dp"
-                                android:layout_height="match_parent"
-                                android:text="Dark"
-                                android:textSize="25sp"
-                                android:textAllCaps="false"
-                                android:backgroundTint="#000000"
-                                android:textColor="@color/white"/>
-                        </LinearLayout>
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_margin="10dp"-->
+<!--                        android:orientation="vertical">-->
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Theme"-->
+<!--                            android:textSize="25dp"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:layout_margin="5dp"/>-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:gravity="center">-->
+<!--                            <Button-->
+<!--                                android:layout_width="170dp"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:text="Light"-->
+<!--                                android:layout_marginRight="20dp"-->
+<!--                                android:textSize="25sp"-->
+<!--                                android:textAllCaps="false"-->
+<!--                                android:backgroundTint="#E4E4E4"-->
+<!--                                android:textColor="@color/black"/>-->
+<!--                            <Button-->
+<!--                                android:layout_width="170dp"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:text="Dark"-->
+<!--                                android:textSize="25sp"-->
+<!--                                android:textAllCaps="false"-->
+<!--                                android:backgroundTint="#000000"-->
+<!--                                android:textColor="@color/white"/>-->
+<!--                        </LinearLayout>-->
 
 
 
-                    </LinearLayout>
+<!--                    </LinearLayout>-->
 
 
                     <TextView
@@ -156,9 +154,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="15dp"
                         android:layout_marginTop="5dp"
+                        android:textSize="16sp"
                         android:text="Upgrade My Account"
                         android:backgroundTint="#0099FF"
-                        android:textSize="25sp"
                         android:textAllCaps="false"/>
                     <Button
                         android:id="@+id/logoutBtn"
@@ -167,18 +165,14 @@
                         android:layout_marginHorizontal="15dp"
                         android:layout_marginTop="5dp"
                         android:text="Logout"
+                        android:textSize="16sp"
                         android:backgroundTint="#0099FF"
-                        android:textSize="25sp"
                         android:textAllCaps="false"/>
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
-
-
-
         </LinearLayout>
-    </ScrollView>
 
 
 </RelativeLayout>

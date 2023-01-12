@@ -83,9 +83,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_home:
                         startActivity(new Intent(MainActivity.this, MainActivity.class));
                         break;
-                    case R.id.nav_settings:
-                        Toast.makeText(MainActivity.this, "Settings is clicked", Toast.LENGTH_SHORT).show();
-                        break;
+//                    case R.id.nav_settings:
+//                        Toast.makeText(MainActivity.this, "Settings is clicked", Toast.LENGTH_SHORT).show();
+//                        break;
                     case R.id.nav_shortlist:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, shortlistFragment).commit();
                         break;

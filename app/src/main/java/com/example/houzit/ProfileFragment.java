@@ -32,7 +32,7 @@ public class ProfileFragment extends Fragment {
     FirebaseAuth firebaseAuth;
     FirebaseFirestore firebaseFirestore;
     TextView userName, userEmail, userPhone;
-    Button logoutBtn, upgradeBtn;
+    Button logoutBtn, upgradeBtn, editAccBtn, changeePassBtn;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,6 +43,10 @@ public class ProfileFragment extends Fragment {
         userName = view.findViewById(R.id.userName);
         userEmail = view.findViewById(R.id.userEmail);
         userPhone = view.findViewById(R.id.userPhone);
+        logoutBtn = view.findViewById(R.id.logoutBtn);
+        upgradeBtn = view.findViewById(R.id.upgradeBtn);
+        editAccBtn = view.findViewById(R.id.editAccBtn);
+        changeePassBtn = view.findViewById(R.id.changePassBtn);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
@@ -59,19 +63,33 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-//        logoutBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-////                FirebaseAuth.getInstance().signOut();
-//                startActivity(new Intent(getActivity(), SigninPage.class));
-//            }
-//        });
-//        upgradeBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new ProfileFragment()).commit();
-//            }
-//        });
+        editAccBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity().getApplicationContext(), EditAccount.class));
+            }
+        });
+        changeePassBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity().getApplicationContext(), ChangePasswd.class));
+            }
+        });
+
+        logoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getActivity().getApplicationContext(), SigninPage.class));
+                getActivity().finish();
+            }
+        });
+        upgradeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new PlansFragment()).commit();
+            }
+        });
 
         return view;
     }

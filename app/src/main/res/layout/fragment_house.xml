@@ -79,7 +79,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Search"
-                        android:textSize="18sp"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_gravity="center"/>
@@ -120,7 +119,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Post an Ad"
-                        android:textSize="18sp"
                         android:layout_gravity="center"
                         android:layout_marginEnd="20dp"
                         android:layout_marginStart="20dp"/>

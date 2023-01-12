@@ -2,8 +2,11 @@ package com.example.houzit;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,8 +21,10 @@ public class PGDetails extends AppCompatActivity {
 
     ImageView imageView;
     TextView userString, rentVal, depositVal;
-    TextView gender, laundry, vegNonveg, parking, food, housekeeping, security, sharing, description;
+    TextView gender, laundry, vegNonveg, parking, food, housekeeping, security, sharing, description,ownerName, ownerPhone, ownerEmail;
     DatabaseReference databaseReference;
+    CardView ownerView;
+    Button contactOwnerBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +43,11 @@ public class PGDetails extends AppCompatActivity {
         security=findViewById(R.id.security);
         sharing=findViewById(R.id.sharing);
         description=findViewById(R.id.description);
+        ownerEmail=findViewById(R.id.ownerEmail);
+        ownerPhone=findViewById(R.id.ownerPhone);
+        ownerName=findViewById(R.id.ownerName);
+        ownerView=findViewById(R.id.ownerView);
+        contactOwnerBtn=findViewById(R.id.contactOwnerBtn);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("PG");
 
@@ -67,12 +77,21 @@ public class PGDetails extends AppCompatActivity {
                     security.setText(snapshot.child("Security").getValue().toString()+" gated security");
                     sharing.setText("Available "+snapshot.child("Sharing").getValue().toString());
                     description.setText(snapshot.child("Description").getValue().toString());
+                    ownerName.setText(snapshot.child("OwnerName").getValue().toString());
+                    ownerEmail.setText(snapshot.child("OwnerEmail").getValue().toString());
+                    ownerPhone.setText(snapshot.child("OwnerContact").getValue().toString());
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+        contactOwnerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ownerView.setVisibility(View.VISIBLE);
             }
         });
     }

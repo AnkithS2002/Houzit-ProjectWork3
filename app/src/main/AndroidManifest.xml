@@ -16,6 +16,20 @@
         android:theme="@style/Theme.Houzit"
         tools:targetApi="31">
         <activity
+            android:name=".ChangePasswd"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".EditAccount"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".RoommateDetails"
             android:exported="false">
             <meta-data

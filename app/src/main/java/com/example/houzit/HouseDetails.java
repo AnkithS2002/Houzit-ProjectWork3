@@ -2,10 +2,12 @@ package com.example.houzit;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -39,8 +41,10 @@ public class HouseDetails extends AppCompatActivity {
 
     ImageView imageView;
     TextView userString, rentVal, depositVal;
-    TextView areasqft, furnishing, vegNonveg, parking, dateAvl, facing, security, water, description;
+    TextView areasqft, furnishing, vegNonveg, parking, dateAvl, facing, security, water, description, ownerName, ownerPhone, ownerEmail;
     DatabaseReference databaseReference;
+    CardView ownerView;
+    Button contactOwnerBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +64,11 @@ public class HouseDetails extends AppCompatActivity {
         security=findViewById(R.id.security);
         water=findViewById(R.id.water);
         description=findViewById(R.id.description);
-
+        ownerEmail=findViewById(R.id.ownerEmail);
+        ownerPhone=findViewById(R.id.ownerPhone);
+        ownerName=findViewById(R.id.ownerName);
+        ownerView=findViewById(R.id.ownerView);
+        contactOwnerBtn=findViewById(R.id.contactOwnerBtn);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("House");
 
@@ -89,12 +97,24 @@ public class HouseDetails extends AppCompatActivity {
                     security.setText(snapshot.child("Security").getValue().toString()+" gated security");
                     dateAvl.setText("Available from "+snapshot.child("DateAvl").getValue().toString());
                     description.setText(snapshot.child("Description").getValue().toString());
+
+                    ownerName.setText(snapshot.child("OwnerName").getValue().toString());
+                    ownerEmail.setText(snapshot.child("OwnerEmail").getValue().toString());
+                    ownerPhone.setText(snapshot.child("OwnerContact").getValue().toString());
+
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+
+        contactOwnerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ownerView.setVisibility(View.VISIBLE);
             }
         });
     }
