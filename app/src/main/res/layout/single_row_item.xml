@@ -9,10 +9,10 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         app:cardCornerRadius="20dp"
-        app:strokeColor="@color/black"
         app:strokeWidth="2dp"
-        android:background="@color/teal_200">
+        app:cardElevation="10dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -30,7 +30,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="1BHK for rent in Basavanagudi"
-                android:textColor="@color/black"
                 android:layout_marginTop="5dp"
                 android:textSize="22sp"
                 android:textAlignment="center"/>
@@ -47,28 +46,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Rent: "
-                    android:textColor="@color/black"
                     android:textSize="20sp"/>
                 <TextView
                     android:id="@+id/rentVal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="RentVal"
-                    android:textColor="@color/black"
                     android:textSize="20sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Deposit: "
-                    android:textColor="@color/black"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="30dp"
                     android:textSize="20sp"/>
                 <TextView
                     android:id="@+id/depositVal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="DepositVal"
-                    android:textColor="@color/black"
                     android:textSize="20sp"/>
 
 

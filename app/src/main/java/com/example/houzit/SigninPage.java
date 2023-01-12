@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SigninPage extends AppCompatActivity {
 
@@ -35,13 +36,32 @@ public class SigninPage extends AppCompatActivity {
                 String email = binding.emailAddress.getText().toString().trim();
                 String password = binding.password.getText().toString().trim();
                 progressDialog.show();
-                firebaseAuth.signInWithEmailAndPassword(email, password)
+                firebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
                                 progressDialog.cancel();
-                                startActivity(new Intent(SigninPage.this, MainActivity.class));
-                                Toast.makeText(SigninPage.this, "Signin successful",Toast.LENGTH_SHORT).show();
+                                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                if(user.isEmailVerified()){
+                                    startActivity(new Intent(SigninPage.this, MainActivity.class));
+                                    Toast.makeText(SigninPage.this, "Signin successful",Toast.LENGTH_SHORT).show();
+                                }
+                                else{
+                                    user.sendEmailVerification()
+                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void unused) {
+                                                    Toast.makeText(SigninPage.this, "Kindly verify your email",Toast.LENGTH_SHORT).show();
+                                                }
+                                            })
+                                            .addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    Toast.makeText(SigninPage.this, e.getMessage(),Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
+                                }
+
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {

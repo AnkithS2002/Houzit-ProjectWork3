@@ -17,6 +17,8 @@ import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.common.net.InternetDomainName;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     ShortlistFragment shortlistFragment =new ShortlistFragment();
     PlansFragment plansFragment = new PlansFragment();
     ProfileFragment profileFragment = new ProfileFragment();
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,30 +82,34 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.nav_home:
                         startActivity(new Intent(MainActivity.this, MainActivity.class));
-                        Toast.makeText(MainActivity.this, "Home is clicked", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_settings:
                         Toast.makeText(MainActivity.this, "Settings is clicked", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_shortlist:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, shortlistFragment).commit();
-                        Toast.makeText(MainActivity.this, "Shortlist is clicked", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_plans:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, plansFragment).commit();
-                        Toast.makeText(MainActivity.this, "plans is clicked", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_profile:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, profileFragment).commit();
-                        Toast.makeText(MainActivity.this, "Profile is clicked", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_login:
-                        Toast.makeText(MainActivity.this, "logout is clicked", Toast.LENGTH_SHORT).show();
+                        FirebaseAuth.getInstance().signOut();
+                        startActivity(new Intent(getApplicationContext(), SigninPage.class));
+                        finish();
+                        Toast.makeText(MainActivity.this, "logged out successfully", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_about:
-                        Toast.makeText(MainActivity.this, "about us is clicked", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this, AboutUs.class));
                         break;
                     case R.id.nav_share:
+                        Intent intent = new Intent(Intent.ACTION_SEND);
+                        intent.setType("text/plain");
+                        intent.putExtra(Intent.EXTRA_SUBJECT, "Check out this this cool application");
+                        intent.putExtra(Intent.EXTRA_TEXT, "Your application link is here");
+                        startActivity(Intent.createChooser(intent, "Share Via"));
                         Toast.makeText(MainActivity.this, "Share is clicked", Toast.LENGTH_SHORT).show();
                         break;
                     default:
