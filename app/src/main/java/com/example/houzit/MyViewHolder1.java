@@ -12,6 +12,7 @@ public class MyViewHolder1 extends RecyclerView.ViewHolder {
     TextView userString;
     TextView rentVal;
     TextView depositVal;
+    TextView collegeVal;
     View v;
     public MyViewHolder1(@NonNull View itemView) {
         super(itemView);
@@ -19,6 +20,7 @@ public class MyViewHolder1 extends RecyclerView.ViewHolder {
         userString = itemView.findViewById(R.id.userString);
         rentVal = itemView.findViewById(R.id.rentVal);
         depositVal = itemView.findViewById(R.id.depositVal);
+        collegeVal = itemView.findViewById(R.id.collegeVal);
         v = itemView;
     }
 }

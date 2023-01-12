@@ -71,7 +71,16 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
 
+
             </LinearLayout>
+            <TextView
+                android:id="@+id/collegeVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="College"
+                android:textColor="@color/white"
+                android:textSize="1sp"
+                android:layout_gravity="center"/>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 

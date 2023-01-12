@@ -50,6 +50,7 @@ public class HouseFragment extends Fragment {
             public void onClick(View view) {
 //                Intent intent = new Intent(getActivity(), ListItems_Recyclerview.class);
                     Intent intent = new Intent(getActivity(), RecyclerViewPage.class);
+                    intent.putExtra("college", autoCompleteTextView.getText().toString());
                 startActivity(intent);
             }
         });
