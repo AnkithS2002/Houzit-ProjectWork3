@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PostPropertyPG"
+    tools:context=".PostPropertyRoommate"
     android:background="@color/purple_500"
     android:orientation="vertical">
 
@@ -57,16 +57,12 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Upload the image of the PG"
+                        android:text="Upload the image of the house"
                         android:textColor="@color/black"
                         android:textAlignment="center"
                         android:textSize="20sp"/>
 
-                    <EditText
-                        android:id="@+id/PGName"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="PG name"/>
+
                     <EditText
                         android:id="@+id/ownerName"
                         android:layout_width="match_parent"
@@ -88,6 +84,11 @@
                         android:layout_height="wrap_content"
                         android:hint="College nearby"/>
                     <AutoCompleteTextView
+                        android:id="@+id/autocompHouseType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="House type"/>
+                    <AutoCompleteTextView
                         android:id="@+id/autocompAreaName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -103,35 +104,35 @@
                         android:layout_height="wrap_content"
                         android:hint="Deposit amount"/>
                     <EditText
-                        android:id="@+id/gender"
+                        android:id="@+id/areasqft"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Gender Allowed"/>
+                        android:hint="House area in Sq. ft."/>
                     <EditText
-                        android:id="@+id/laundry"
+                        android:id="@+id/facing"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Laundry facility"/>
+                        android:hint="House facing"/>
                     <EditText
-                        android:id="@+id/food"
+                        android:id="@+id/furnishing"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Food"/>
+                        android:hint="Furnishing status"/>
                     <EditText
-                        android:id="@+id/sharing"
+                        android:id="@+id/water"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Sharing available"/>
+                        android:hint="Water connection"/>
                     <EditText
                         android:id="@+id/parking"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Parking facility"/>
                     <EditText
-                        android:id="@+id/housekeeping"
+                        android:id="@+id/gender"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="House Keeping"/>
+                        android:hint="Gender preferred"/>
                     <EditText
                         android:id="@+id/security"
                         android:layout_width="match_parent"

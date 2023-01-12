@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RoommateDetails"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/userimage"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:src="@color/black"
+                />
+            <TextView
+                android:id="@+id/userstringval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UserString"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:layout_margin="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rent: "
+                    android:textSize="22sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"/>
+                <TextView
+                    android:id="@+id/userrentval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="rentval"
+                    android:textSize="22sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deposit: "
+                    android:textSize="22sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="70dp"/>
+                <TextView
+                    android:id="@+id/userdepositval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="depositval"
+                    android:textSize="22sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <Button
+                    android:id="@+id/contactOwnerBtn"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Roommate"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"/>
+                <Button
+                    android:id="@+id/shortlistBtn"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="Add to Shortlist"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Overview"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:rowCount="4"
+                android:columnCount="2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp">
+
+
+                <TextView
+                    android:id="@+id/areasqft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:textSize="20sp"
+                    android:text="500 sq.ft. area"
+                    />
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:textSize="20sp"
+                    android:text="Male only"
+                    />
+                <TextView
+                    android:id="@+id/furnishing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:textSize="20sp"
+                    android:text="Semi furnished"
+                    />
+                <TextView
+                    android:id="@+id/facing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:textSize="20sp"
+                    android:text="East facing"
+                    />
+                <TextView
+                    android:id="@+id/vegNonveg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:textSize="20sp"
+                    android:text="Yes non-veg allowed"
+                    />
+                <TextView
+                    android:id="@+id/security"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:textSize="20sp"
+                    android:text="yes gated security"
+                    />
+                <TextView
+                    android:id="@+id/parking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:textSize="20sp"
+                    android:text="Bike parking"
+                    />
+                <TextView
+                    android:id="@+id/water"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:textSize="20sp"
+                    android:text="borewell and Corp."
+                    />
+
+            </GridLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description_house"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
