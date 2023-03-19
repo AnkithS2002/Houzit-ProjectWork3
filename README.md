@@ -1,4 +1,4 @@
-# ProjectWork3
+# Houzit
 Houzit - the Android App
 Built using: Java (Logic and functionalities), XML (Design), Firebase (Backend database)
 Houzit is an android app which is helpful for college students who are new to the city to find House, PG or roommate near to their college.
